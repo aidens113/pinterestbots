@@ -223,12 +223,12 @@ def initdriver(proxy):
     #chrome_options.add_argument("--start-maximized")
     #chrome_options.add_argument(str('--proxy-server='+str(proxy)))
     #chrome_options.add_argument("--headless")
-    countries = ['IE','US','UK','CA']
+    #countries = ['IE','US','UK','CA']
     proxyauth_plugin_path = create_proxyauth_extension(
     proxy_host=str(str(proxy.split(":")[0]).strip().replace("\n","").replace("\r","")),  #"51.161.115.64",
     proxy_port=str(str(proxy.split(":")[1]).strip().replace("\n","").replace("\r","")),#80,
-    proxy_username=str(str('bobiscool113-refreshMinutes-5')),#+str(countries[therand])),#str(str(proxy.split(":")[2]).strip().replace("\n","").replace("\r","")),#"country-ca",
-    proxy_password='e9e113-251591-1dc380-248832-0e39c5',#str(str(proxy.split(":")[3]).strip().replace("\n","").replace("\r","")),#"ead2795d-a80d-4ea0-b686-c08f23894210",
+    proxy_username="user",#+str(countries[therand])),#str(str(proxy.split(":")[2]).strip().replace("\n","").replace("\r","")),#"country-ca",
+    proxy_password='passw',#str(str(proxy.split(":")[3]).strip().replace("\n","").replace("\r","")),
     scheme='http'
     )
     chrome_options.add_extension(proxyauth_plugin_path)
@@ -656,8 +656,8 @@ def makegetrequest(url,headers,data=None,json=None):
     #fakeip = str("1"+str(random.randint(10,99))+".1"+str(random.randint(10,99))+"."+str(random.randint(1,9))+"."+str(random.randint(10,99)))
     #print(fakeip)
 
-    proxy  = {"http" : "http://bobiscool113:e9e113-251591-1dc380-248832-0e39c5@megaproxy.rotating.proxyrack.net:222",
-                  "https" : "http://bobiscool113:e9e113-251591-1dc380-248832-0e39c5@megaproxy.rotating.proxyrack.net:222"}
+    proxy  = {"http" : "http://proxyhere",
+                  "https" : "http://proxyhere"}
 
     response = requests.get(str(url), headers=headers,proxies=proxy,data=data,json=json)
     return response
@@ -667,8 +667,8 @@ def makepostrequest(url,headers,data=None,json=None):
     #fakeip = str("1"+str(random.randint(10,99))+".1"+str(random.randint(10,99))+"."+str(random.randint(1,9))+"."+str(random.randint(10,99)))
     #print(fakeip)
 
-    proxy  = {"http" : "http://bobiscool113:e9e113-251591-1dc380-248832-0e39c5@megaproxy.rotating.proxyrack.net:222",
-                  "https" : "http://bobiscool113:e9e113-251591-1dc380-248832-0e39c5@megaproxy.rotating.proxyrack.net:222"}
+    proxy  = {"http" : "http://proxyhere",
+                  "https" : "http://proxyhere"}
 
     response = requests.post(str(url), headers=headers,proxies=proxy,data=data,json=json)
     return response
@@ -970,7 +970,7 @@ def dmloop(driver,myusername):
 
 def collectusernames(driver,myusername,usernamestoget):
     #GET LINKS
-    usernames = ['Giftedgiveaway','Giftedgiveaway','Giftedgiveaway']
+    usernames = []
     while True:
         for _ in range(4):
             try:
@@ -1082,7 +1082,7 @@ def senddmwithcookies(threadnum):
     loggedin = False
     while True:
         try:
-            driver = initdriver("megaproxy.rotating.proxyrack.net:222")    
+            driver = initdriver("proxyhere")    
                     
             acc = accs[int(thei * threadnum)]
             thei += 1
@@ -1251,6 +1251,7 @@ def repin(driver,thelink):
 
 
 def randomrepin(driver,pins):
+    global postlink
     pinsdone = 0
     while True:
         try:
@@ -1282,7 +1283,7 @@ def randomrepin(driver,pins):
                 pinsdone += 1
                 repin(driver,link)
                 if pinsdone >= pins:
-                    repin(driver,"https://www.pinterest.ca/pin/1112178070449011536/")
+                    repin(driver,postlink)
                     return
             
         except Exception as EEEEE:
@@ -1354,7 +1355,7 @@ def startthreads(threadnum):
     #target=spam, args=("megaproxy.rotating.proxyrack.net:222",i,)
     #target=senddmwithcookies,args=[i]
     for i in range(threadnum):
-        Thread = threading.Thread(target=spam, args=("megaproxy.rotating.proxyrack.net:222",i,))    
+        Thread = threading.Thread(target=spam, args=(postlink,i,))    
         threads.append(Thread)
     for thread in threads:
         thread.start()
