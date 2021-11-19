@@ -273,7 +273,6 @@ def register(driver):
             time.sleep(1)
 
     if continuenow == True:
-        #domains = ['@accounthaven.net','@seo-tips.tech','@realcoolmail.space','@coolcloudmail.space','@email-lists.store','@cool-mail.space','@onecoolpost.space','@premiummail.site','@news-network.press']
         domains = ['@outlook.com']
         file = open("usernames.txt","r")
         users = file.readlines()
@@ -720,7 +719,6 @@ def sendDM(username,thecookie,useragent,myuserid):
             'content-type': 'application/x-www-form-urlencoded',
             'x-csrftoken':str(thecookie.split("csrftoken=")[1].split(";")[0]),
             'x-pinterest-appstate':'active',
-            #'x-pinterest-experimenthash':'b7ff279a1a303c9395634401393c73ad69079b3a218c4d0f8edd19aec69fd074112cc21726b344f6a441acb0e2ca2fa85fb3129009e8d504eccab17593cdba94',
             'x-pinterest-source-url':'/livigstonbarry/_saved/',
             'x-pinterest-pws-handler':'www/[username]/_saved.js',
             'content-length':'264',
@@ -1372,10 +1370,9 @@ SPAM PINTEREST.COM WITH LINKS
 urltovisit = "https://pinterest.com"
 followlink = "https://www.pinterest.ca/Giftedgiveaway"
 postlink = "https://www.pinterest.ca/pin/1112178070449011536/"
-#DMloop('csrftoken=609cb9029c3b6665d898f17476f1751b; _pinterest_sess=TWc9PSZ6TTl1ck04M0hBbzVWdmFVYjk4WU5OMlo5YnZWOXZabEExREdITDh4MGUzbkhEaFRrME5LK2tsSWxzRVV2WDdPWmdBajVJWlk4QURWb2RaK0xVSVhMS0RLR3VBYlBnOVE5bVd2WjFGZXhOS2pabi9iTDNlUFFsZCtDQXNWZmZXM3hmejlLUUpsTllXTjBEY3gwQVpQV2Z6UlZ6eDdDQ3UrZWlDWXRKMms2RTlnTExrZTY2dk91cWtSSE5SazRxV3FsTEp6N3Eyb2paYjczUytrcTk5aW1pelVROGRUbEtIc2RzNUQwOGtKVzMzeXZQa1paaXo1cEZtVEVtU2F4OENFbGZNcCtLTFZIQXM4ekEyWHBOeGNSSUM5bnZXanYzcm95ejIxUzFNNXNhUEhWRHVwVFF3cmxTUnpHdnpvZ2MzaE9ZSmdYVkRyVGFwZW1SRHg0aHFaNFYxSklXL0xxaEphUzNNVjJHa1FmbWRLeGNxcWFLYU9RaS91T0ZmZS9RK2RVeHdMVXU1KzVQOU43eW1tQkg3d2ZDakU3cjVQdEc4M0lsbzlGRDZwdThVVC9FY2g1UkU5ZFlPZzlVMEJIN20zdnZjUkpJQ05KNUJ5K1JBZWNQSWE2MTFOclQ0aHdlNDRvalB1OFgvMlJ1U3o5OWNrcytBcDkvbzFWTnpJSi9UTEJqczk2L2NrUzAyQVV3cEFYQUJZZGZFOE9oemlhd3ozdkUzWGtVOEYxY3NaV1U3K1BXYlREMmd4TG93aURWY25NSlBDQU9PMDhTeXZ0c3JLbVJzNUdPZjNvOU9yT2VFOFc2QkJGYzRqSk50TzNUQlF1c2dHSnlVMzNjcEtHUUtxWFgvMGk5blJvZFdZM21kaHZQRWFOVTJsbElwbldyU1ltMW8vSnlKS3F6SnRhZjcwL1JwWHkvYmhSRzk3Vk9xMGVKUWFIdktlaG9OS0h0bkN4Q0Y0aUs4Y296K0wrOWFtb0VjREhjR2F0YWFnR3pLZmJFU1d5bWJ0YzJrQVM0ZWhKcnlqb2ZGMUZ5dklRa2FJa3VJSjJGZEt2NWFDa0hBeVUrRmtiS1VsSzlRPSZuTFNpd3A2YzF5TXJpNFk4NzBZaUNnbkJkRlE9; _auth=1; _routing_id="fe50c049-7849-4395-b818-20bfed4e42d8"; sessionFunnelEventLogged=1')
 threadstodo = int(input("Threads: "))
 startthreads(threadstodo)
 
-#driver = initdriver("megaproxy.rotating.proxyrack.net:222")
+#driver = initdriver(")
 #time.sleep(60)
 #spamforums(driver)
