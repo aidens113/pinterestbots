@@ -1368,8 +1368,8 @@ SPAM PINTEREST.COM WITH LINKS
 -
 """)
 urltovisit = "https://pinterest.com"
-followlink = "https://www.pinterest.ca/Giftedgiveaway"
-postlink = "https://www.pinterest.ca/pin/1112178070449011536/"
+followlink = ""
+postlink = ""
 threadstodo = int(input("Threads: "))
 startthreads(threadstodo)
 
