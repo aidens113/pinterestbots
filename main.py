@@ -1363,8 +1363,8 @@ def startthreads(threadnum):
 
     
 print("""
-WELCOME TO PINTEREST FORUM SPAMMER V.1
-SPAM PINTEREST.COM WITH LINKS
+WELCOME TO PINTEREST FORUM COMMENTS V.1
+POST TO PINTEREST.COM WITH LINKS
 -
 """)
 urltovisit = "https://pinterest.com"
