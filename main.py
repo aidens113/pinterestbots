@@ -482,7 +482,7 @@ def login(email,passw,driver):
     except Exception as EEEE:
         print("Error logging in: "+str(EEEE))
 
-def spamforums(driver):
+def postforums(driver):
     try:
         #GET LINKS
         for _ in range(4):
@@ -1310,7 +1310,7 @@ def spam(proxy,threadnum):
                     
                         #commenthype(driver)
                         #follow(driver)
-                        #spamforums(driver)
+                        #postforums(driver)
                         randomrepin(driver,5)
                         #if dmloop(driver,email.split("@")[0]) == False:
                         #    try:
@@ -1375,4 +1375,4 @@ startthreads(threadstodo)
 
 #driver = initdriver(")
 #time.sleep(60)
-#spamforums(driver)
+#postforums(driver)
